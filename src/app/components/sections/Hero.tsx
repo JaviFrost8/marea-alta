@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
-import { Button } from '../ui/Button';
+import { PrimaryButton } from '../ui/PrimaryButton';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <div className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden md:-mt-20">
+    <div className="relative h-screen w-full flex items-center justify-center text-center overflow-hidden -mt-20">
       {/* Imagen del Hero */}
       <Image
         src={'/images/hero.webp'}
@@ -29,10 +29,25 @@ export const Hero = () => {
           UNA EXPERIENCIA GASTRONÓMICA
         </h2>
 
-        <Link className="mt-8" href={'/reservas'}>
-          <Button text="RESERVAR MESA" />
+        <Link className="mt-8 mb-8" href={'/reservas'}>
+          <PrimaryButton text="RESERVAR MESA" />
         </Link>
       </motion.div>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="3.5"
+        stroke="white"
+        className="absolute bottom-10 size-6 animate-bounce"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </svg>
     </div>
   );
 };
