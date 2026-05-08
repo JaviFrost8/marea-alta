@@ -12,6 +12,7 @@ export const Hero = () => {
         src={'/images/hero.webp'}
         alt="Foto del hero de restaurante Marea Alta"
         fill
+        priority
         className="object-cover object-[50%_60%]"
       />
       {/* Overlay */}
@@ -24,8 +25,10 @@ export const Hero = () => {
         transition={{ duration: 1, ease: 'easeOut' }}
         className="relative flex flex-col justify-center items-center Z-10"
       >
-        <h1 className="text-white text-4xl font-heading mb-5">Marea Alta</h1>
-        <h2 className="font-heading text-secondary tracking-[3px]">
+        <h1 className="text-white text-4xl md:text-5xl font-heading mb-5">
+          Marea Alta
+        </h1>
+        <h2 className="font-heading text-secondary tracking-[2px] md:tracking-[5px]">
           UNA EXPERIENCIA GASTRONÓMICA
         </h2>
 
@@ -34,6 +37,7 @@ export const Hero = () => {
         </Link>
       </motion.div>
 
+      {/* Icono flecha hacia abajo */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

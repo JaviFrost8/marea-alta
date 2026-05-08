@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Navlink } from '../ui/Navlink';
 
 export const Header = () => {
   return (
@@ -12,27 +13,28 @@ export const Header = () => {
               src={'/images/logo-marea-alta.webp'}
               alt="Logo de Marea Alta"
               width={120}
-              height={100}
+              height={120}
+              className="h-16 w-auto"
             />
           </Link>
         </div>
         <div className="flex justify-center items-center">
           <nav className="absolute left-1/2 -translate-x-1/2 hidden md:block font-semibold text-tertiary">
-            <ul className="flex md:gap-6 lg:gap-10">
+            <ul className="flex justify-center items-center md:gap-6 lg:gap-10 h-15">
               <li>
-                <Link href={'/'}>Inicio</Link>
+                <Navlink href={'/'} label="Inicio" />
               </li>
               <li>
-                <Link href={'/carta'}>Carta</Link>
+                <Navlink href={'/carta'} label="Carta" />
               </li>
               <li>
-                <Link href={'/reservas'}>Reservas</Link>
+                <Navlink href={'/reservas'} label="Reservas" />
               </li>
               <li>
-                <Link href={'/quienes-somos'}>El Alma</Link>
+                <Navlink href={'/quienes-somos'} label="El Alma" />
               </li>
               <li>
-                <Link href={'/contacto'}>Contacto</Link>
+                <Navlink href={'/contacto'} label="Contacto" />
               </li>
             </ul>
           </nav>
