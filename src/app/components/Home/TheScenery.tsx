@@ -27,7 +27,7 @@ export const TheScenery = () => {
   } as const;
 
   return (
-    <section className="w-full my-24">
+    <section className="w-full mt-24 md:my-24">
       {/* TEXTO */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -49,7 +49,7 @@ export const TheScenery = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ amount: 0.2, once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 lg:gap-10 md:h-[80vh] md:px-10 lg:mx-16 mt-20"
+        className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 lg:gap-10 md:h-[80vh] md:px-10 lg:mx-16 mt-20 overflow-hidden"
       >
         {/* IMAGEN GRANDE */}
         <motion.div

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Manrope, Noto_Serif } from 'next/font/google';
 import './globals.css';
 import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
 
 const notoSerif = Noto_Serif({
   variable: '--noto-serif',
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-primary antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

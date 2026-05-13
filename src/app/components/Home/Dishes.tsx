@@ -1,8 +1,25 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import React from 'react';
 
 export const Dishes = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.3 },
+    },
+  } as const;
+
+  const itemsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  } as const;
+
   return (
     <section className="w-full bg-white pb-24">
       <div className="pt-16 lg:px-20 lg:pt-28">
@@ -26,8 +43,14 @@ export const Dishes = () => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 lg:px-20 gap-20 mt-24">
-        <div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ amount: !isMobile ? 0.3 : 0.1, once: true }}
+        className="grid grid-cols-1 lg:grid-cols-3 lg:px-20 gap-20 mt-24"
+      >
+        <motion.div variants={itemsVariants}>
           <div className="relative h-125 overflow-hidden group">
             <Image
               src={'/images/ostras.webp'}
@@ -51,9 +74,9 @@ export const Dishes = () => {
               de lima kaffir.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={itemsVariants}>
           <div className="relative h-125 overflow-hidden group">
             <Image
               src={'/images/arroz-meloso.webp'}
@@ -77,9 +100,9 @@ export const Dishes = () => {
               intenso de roca.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={itemsVariants}>
           <div className="relative h-125 overflow-hidden group">
             <Image
               src={'/images/postre-chocolate.webp'}
@@ -103,8 +126,8 @@ export const Dishes = () => {
               cristales de sal Maldon.
             </p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
