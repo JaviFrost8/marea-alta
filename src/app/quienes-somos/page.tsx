@@ -1,9 +1,11 @@
+import { AlmaHero } from '../components/el-alma/AlmaHero';
+import { ChefSection } from '../components/el-alma/ChefSection';
+
 export default function page() {
   return (
-    <div>
-      <div>
-        <h1 className="text-tertiary">Sobre nosotros</h1>
-      </div>
-    </div>
+    <>
+      <AlmaHero />
+      <ChefSection />
+    </>
   );
 }

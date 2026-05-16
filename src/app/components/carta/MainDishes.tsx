@@ -4,7 +4,7 @@ import { GridMainDishes } from './GridMainDishes';
 
 export const MainDishes = () => {
   return (
-    <section className="w-full bg-neutral pt-28">
+    <section className="w-full bg-neutral pt-12 lg:pt-28">
       <div className="flex flex-col items-center">
         <h2 className="font-heading font-semibold text-white">
           Platos principales

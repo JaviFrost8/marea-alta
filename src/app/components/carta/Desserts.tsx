@@ -3,7 +3,7 @@ import { MenuItem } from './MenuItem';
 
 export const Desserts = () => {
   return (
-    <section className="flex flex-col w-full pt-28 pb-16 bg-primary">
+    <section className="flex flex-col w-full pt-12 lg:pt-28 pb-12 lg:pb-16 bg-primary">
       <div className="flex flex-col w-full items-center">
         <h2 className="font-heading font-semibold text-white text-center">
           Postres Artesanales

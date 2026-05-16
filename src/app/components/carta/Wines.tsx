@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const Wines = () => {
   return (
-    <section className="w-full pt-28 bg-neutral">
+    <section className="w-full pt-12 lg:pt-28 bg-neutral">
       <div className="text-center max-w-2xl mx-auto">
         <div className="flex flex-col w-full items-center">
           <h2 className="font-heading font-semibold text-white text-center">

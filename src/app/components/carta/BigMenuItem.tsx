@@ -20,9 +20,9 @@ export const BigMenuItem = ({
 }: BigMenuItemProps) => {
   return (
     <div
-      className={`flex ${reverse ? 'flex-row-reverse' : ''} w-full mt-28 px-28`}
+      className={`flex flex-col lg:flex-row ${reverse ? 'lg:flex-row-reverse' : ''} w-full mt-8 lg:mt-28 lg:px-28`}
     >
-      <div className="flex flex-col justify-center w-1/2 my-20 px-20">
+      <div className="flex flex-col justify-center w-full lg:w-1/2 my-8 lg:my-20 px-4 lg:px-20">
         <h2 className="text-secondary font-heading font-bold mb-4">{title}</h2>
         <h3 className="font-semibold font-heading text-white mb-4">
           {subtitle}
@@ -32,7 +32,7 @@ export const BigMenuItem = ({
           {price}€
         </span>
       </div>
-      <div className="relative w-1/2 h-200">
+      <div className="relative w-full lg:w-1/2 h-100 lg:h-200">
         <div className="w-full">
           <Image
             src={image}

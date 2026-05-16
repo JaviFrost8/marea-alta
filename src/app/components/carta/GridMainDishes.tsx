@@ -2,7 +2,7 @@ import React from 'react';
 
 export const GridMainDishes = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 w-full px-28 py-32 gap-14">
+    <div className="grid grid-cols-1 lg:grid-cols-3 w-full px-2 lg:px-28 py-8 lg:py-32 gap-4 lg:gap-14">
       <div className="border border-t-secondary border-secondary/30 px-8 py-14">
         <h2 className="font-heading text-white font-semibold mb-4">
           Arroz meloso de Bogavante
